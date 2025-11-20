@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(openart-image_WKYzxGkf_1763208485618_raw.jpg);
+}
+
+.space {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.earth {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    filter: blur(7px);
+}
+
+.orbit {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: orbit 5s infinite linear;
+}
+
+.moon {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: darkgray;
+    border-radius: 50%;
+    filter: blur(4px);
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
